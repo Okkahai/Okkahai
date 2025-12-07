@@ -1,4 +1,4 @@
-# 💫 About Me:
+#About Me:
 👋 About Me<br><br>- 💼 Currently working part-time at **ANDRITZ**.  <br>- 🔭 Focused on projects with **C# (.NET), Windows Forms, and DevExpress UI**.  <br>- 🗄️ Experienced with **Entity Framework, ADO.NET**, and layered architectures .  <br>- 🎶 Developed a Spotify clone project to practice full-stack development.  <br>- ⚙️ Worked on SCADA systems for industrial automation.  <br>- 🐍 Currently learning **Python for Machine Learning** and working with **MongoDB**.  <br>- 🎹 Passionate about **music production** with synths.  <br>- 🖥️ Daily driver: **Pop!_OS Linux/Windows**, customized with ricing & productivity tools.  
 
 
