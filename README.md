@@ -104,6 +104,6 @@ Feel free to reach out if you'd like to collaborate on a project or just want to
 
 <div align="center">
 
-⭐️ From [Okkahai](https://github.com/Okkahai) with ❤️
+⭐️[Okkahai](https://github.com/Okkahai)
 
 </div>
