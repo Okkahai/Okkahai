@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Gün Deniz!
+#Hi, I'm Gün Deniz!
 
 <div align="center">
 
@@ -16,9 +16,8 @@
   - Industrial automation and SCADA systems
   - Full-stack development with C# (.NET) and Python
   - Machine Learning and Data Analysis
-- 🎓 **Learning**: Python for Machine Learning, Deep Learning, and MongoDB
-- 🎹 **Hobbies**: Music production with synthesizers, Linux customization, and productivity tools
-- 🖥️ **Daily Driver**: Pop!_OS Linux / Windows (dual boot)
+- 🎓 **Learning**: Python for Machine Learning, Deep Learning, Neural Networks, TensorFlow
+- 🖥️ **Daily Driver**: Linux/Windows
 
 ## 🚀 Featured Projects
 
