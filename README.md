@@ -4,7 +4,6 @@
 
 [![GitHub followers](https://img.shields.io/github/followers/Okkahai?style=social)](https://github.com/Okkahai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gün-deniz-039654298)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/guuuuuuuuuunnn)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:okkahaitemp)
 
 </div>
@@ -97,7 +96,6 @@ Feel free to reach out if you'd like to collaborate on a project or just want to
 
 - 📧 Email: okkahaitemp
 - 💼 LinkedIn: [gün-deniz-039654298](https://linkedin.com/in/gün-deniz-039654298)
-- 📷 Instagram: [@guuuuuuuuuunnn](https://instagram.com/guuuuuuuuuunnn)
 
 ---
 
