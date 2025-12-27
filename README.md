@@ -1,4 +1,4 @@
-# Hi, I'm Gün Deniz!
+# Hi, I'm Gün!
 
 <div align="center">
 
