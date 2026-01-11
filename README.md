@@ -16,7 +16,6 @@
   - Full-stack development with C# (.NET) and Python
   - Machine Learning and Data Analysis
 - 🎓 **Learning**: Python for Machine Learning, Deep Learning, Neural Networks, TensorFlow
-- 🖥️ **Daily Driver**: Linux/Windows
 
 ## 🚀 Featured Projects
 
