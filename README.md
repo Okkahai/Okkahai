@@ -44,17 +44,6 @@
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
 ![DevExpress](https://img.shields.io/badge/DevExpress-FF5722?style=for-the-badge&logo=devexpress&logoColor=white)
 
-## GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Okkahai&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&show_icons=true)
-
-![GitHub Streak](https://github-readme-streak-stats.demolab.com/?user=Okkahai&theme=dracula&hide_border=false)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Okkahai&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-</div>
 
 ## Current Focus
 
