@@ -86,6 +86,12 @@ AI financial-intelligence and **paper-trading** lab (simulation only, no real or
 - **What I learned:** Financial accounting and risk rules, avoiding invented data when providers are missing, and measuring AI predictions instead of trusting them.
 
 ### SoulCurve · *going public soon*
+*Machine learning, web app, REST API, Vercel*
+
+A machine-learning model delivered as a complete product: a trained model behind an API, a web application that uses it, and a separate public website.
+
+- **What I did:** Trained the model and built the surrounding product end to end, split into three deployed parts (landing website, web app and API) on Vercel.
+- **What I learned:** Taking a model from experiment to something people can actually use: serving it through an API, connecting it to a frontend and deploying and maintaining the separate services.
 
 ## GitHub Metrics
 
