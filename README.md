@@ -51,6 +51,21 @@ I'm a software developer working part-time at **ANDRITZ**, where I build softwar
 ![Docker](https://img.shields.io/badge/Docker-0DB7ED?style=flat-square&logo=docker&logoColor=white)
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=flat-square&logo=visualstudio&logoColor=white)
 
+## GitHub Metrics
+
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <img src="./metrics/overview.svg" alt="GitHub activity overview" width="100%">
+      <img src="./metrics/notable.svg" alt="Notable contributions" width="100%">
+    </td>
+    <td valign="top" width="50%">
+      <img src="./metrics/calendar.svg" alt="Contribution calendar" width="100%">
+      <img src="./metrics/languages.svg" alt="Most used languages" width="100%">
+    </td>
+  </tr>
+</table>
+
 ## Projects
 
 ### [AI Information Detection (AID)](https://github.com/sssseaurchin/AI-Information-Detection)
@@ -89,21 +104,6 @@ AI financial-intelligence and **paper-trading** lab (simulation only, no real or
 *Machine learning, web app, API*
 
 New project that combines a machine-learning model with a web app and API. Model development starts now, so there are no results to show yet.
-
-## GitHub Metrics
-
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <img src="./metrics/overview.svg" alt="GitHub activity overview" width="100%">
-      <img src="./metrics/notable.svg" alt="Notable contributions" width="100%">
-    </td>
-    <td valign="top" width="50%">
-      <img src="./metrics/calendar.svg" alt="Contribution calendar" width="100%">
-      <img src="./metrics/languages.svg" alt="Most used languages" width="100%">
-    </td>
-  </tr>
-</table>
 
 ## What I'm Working On
 
