@@ -55,7 +55,7 @@ I'm a software developer working part-time at **ANDRITZ**, where I build softwar
 
 ### [AI Information Detection (AID)](https://github.com/sssseaurchin/AI-Information-Detection)
 
-Graduation project that detects AI-generated content across two tracks:
+Team graduation project that detects AI-generated content across two tracks. **My contribution: most of the image-detection (CNN) track.**
 
 - **Images:** real vs synthetic image classification with a CNN pipeline that benchmarks several backbones (EfficientNet, ResNet50, ConvNeXt, CLIP ViT) and includes dataset hygiene, calibration and corruption-robustness evaluation.
 - **Text:** AI vs human text classification with an LSTM model.
