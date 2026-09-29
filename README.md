@@ -51,18 +51,29 @@ I'm a software developer working part-time at **ANDRITZ**, where I build softwar
 ![Docker](https://img.shields.io/badge/Docker-0DB7ED?style=flat-square&logo=docker&logoColor=white)
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=flat-square&logo=visualstudio&logoColor=white)
 
-## Featured Projects
+## Featured Project
 
-| Project | What it is | Stack |
-|---|---|---|
-| [**MPlayer**](https://github.com/Okkahai/MPlayer) | Desktop music player backed by a database, with a data layer built on Entity Framework | C#, ADO.NET, Entity Framework, SQL |
-| [**ReminderApp**](https://github.com/Okkahai/ReminderApp) | Reminder application that sends email notifications over SMTP and stores reminders in a database | C#, SMTP, SQL |
-| [**AvlTreeMenu**](https://github.com/Okkahai/AvlTreeMenu) | Menu-driven implementation of a self-balancing AVL tree | C |
-| [**C-mini-projects**](https://github.com/Okkahai/C-mini-projects) | Collection of small data structure and algorithm projects from my coursework | C |
-| [**100_Days**](https://github.com/Okkahai/100_Days) | A hundred-day series of Python projects, from basics to automation | Python |
-| [**0lon-Web**](https://github.com/Okkahai/0lon-Web) | Website for the 0lon game project | CSS, HTML |
+### [AI Information Detection (AID)](https://github.com/sssseaurchin/AI-Information-Detection)
 
-At work I also build reporting and calculation tools for industrial process data. That code is proprietary, so it isn't in my public repositories.
+Graduation project that detects AI-generated content across two tracks:
+
+- **Images:** real vs synthetic image classification with a CNN pipeline that benchmarks several backbones (EfficientNet, ResNet50, ConvNeXt, CLIP ViT) and includes dataset hygiene, calibration and corruption-robustness evaluation.
+- **Text:** AI vs human text classification with an LSTM model.
+- Served through a Flask API with a web frontend, and trained and evaluated with a Docker-first workflow.
+
+`Python` `TensorFlow` `CNN` `LSTM` `Flask` `Docker`
+
+## In Development
+
+Repositories going public soon: **SoulCurve**, **SREAgent**, **Alibi** and **MarketOS**.
+
+## GitHub Metrics
+
+<div align="center">
+
+![GitHub metrics](./github-metrics.svg)
+
+</div>
 
 ## What I'm Working On
 
