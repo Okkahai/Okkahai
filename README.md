@@ -94,11 +94,13 @@ New project that combines a machine-learning model with a web app and API. Model
 
 <table>
   <tr>
-    <td valign="top" width="50%"><img src="./metrics/overview.svg" alt="GitHub activity overview" width="100%"></td>
+    <td valign="top" width="50%">
+      <img src="./metrics/overview.svg" alt="GitHub activity overview" width="100%">
+      <img src="./metrics/notable.svg" alt="Notable contributions" width="100%">
+    </td>
     <td valign="top" width="50%">
       <img src="./metrics/calendar.svg" alt="Contribution calendar" width="100%">
       <img src="./metrics/languages.svg" alt="Most used languages" width="100%">
-      <img src="./metrics/notable.svg" alt="Notable contributions" width="100%">
     </td>
   </tr>
 </table>
