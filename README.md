@@ -51,21 +51,41 @@ I'm a software developer working part-time at **ANDRITZ**, where I build softwar
 ![Docker](https://img.shields.io/badge/Docker-0DB7ED?style=flat-square&logo=docker&logoColor=white)
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=flat-square&logo=visualstudio&logoColor=white)
 
-## Featured Project
+## Projects
 
 ### [AI Information Detection (AID)](https://github.com/sssseaurchin/AI-Information-Detection)
+*Team graduation project · Python, TensorFlow, Flask, Docker*
 
-Team graduation project that detects AI-generated content across two tracks. **My contribution: most of the image-detection (CNN) track.**
+Detects AI-generated content in images (CNN) and text (LSTM), served through a Flask API with a web frontend.
 
-- **Images:** real vs synthetic image classification with a CNN pipeline that benchmarks several backbones (EfficientNet, ResNet50, ConvNeXt, CLIP ViT) and includes dataset hygiene, calibration and corruption-robustness evaluation.
-- **Text:** AI vs human text classification with an LSTM model.
-- Served through a Flask API with a web frontend, and trained and evaluated with a Docker-first workflow.
+- **What I did:** Built most of the image-detection track: seven interchangeable architectures (custom CNNs, EfficientNet, ResNet50, ConvNeXt, CLIP ViT), RGB, Sobel and wavelet preprocessing, manifest-based train/val splits, a benchmark runner, calibration, corruption-robustness evaluation and dataset audit tooling.
+- **What I learned:** Evaluation matters as much as the model. Duplicate images leaking between train and validation splits inflate results, so I built tools to find and fix them. I also learned to compare backbones fairly with reproducible splits and to run training in Docker.
 
-`Python` `TensorFlow` `CNN` `LSTM` `Flask` `Docker`
+### OpsPilot (SREAgent) · *going public soon*
+*Python, FastAPI, Celery, PostgreSQL, Redis, OpenTelemetry, Next.js, Docker*
 
-## In Development
+AI-assisted DevOps/SRE platform that follows an incident from failure to root cause: telemetry ingestion, deterministic incident detection, AI investigation, proposed fixes and human approval.
 
-Repositories going public soon: **SoulCurve**, **SREAgent**, **Alibi** and **MarketOS**.
+- **What I did:** Designed the architecture and built it in phases: a demo microservice app with fault injection, an OpenTelemetry ingestion pipeline with partitioned Postgres storage, rule-based incident detection with a timeline, AI investigation, read-only GitHub integration, an approval workflow and a dashboard.
+- **What I learned:** Observability with OpenTelemetry, background job design with Celery, and how to keep AI output trustworthy by labelling every claim as observation, hypothesis or confirmed fact and by requiring human approval for risky actions.
+
+### ColdCase AI (Alibi) · *going public soon*
+*TypeScript, Next.js, Zod, Tailwind, Drizzle, PostgreSQL, Vitest*
+
+AI detective game where the player questions suspects, examines evidence and catches contradictions against a case truth that is fixed before play begins.
+
+- **What I did:** Wrote ten design documents first, then built the game engines: case-truth schema, NPC knowledge, evidence and interrogation systems, with a test suite that checks the anti-hallucination guarantees. It runs without an API key using a deterministic mock LLM.
+- **What I learned:** Constraining an LLM with schema validation so it cannot contradict the ground truth, and testing AI features deterministically.
+
+### MarketOS · *going public soon*
+*Python, FastAPI, Celery, PostgreSQL, Redis, Next.js, TypeScript, Docker*
+
+AI financial-intelligence and **paper-trading** lab (simulation only, no real orders). It collects market data and news, clusters news into events, produces AI investment hypotheses, runs them through deterministic risk rules and measures afterwards whether each hypothesis was right.
+
+- **What I did:** Built the full pipeline across nine phases: market data and news ingestion, event clustering, a validated AI signal journal with cost budgeting, a risk engine with a ledger, analytics against SPY, BTC and cash, and backtesting.
+- **What I learned:** Financial accounting and risk rules, avoiding invented data when providers are missing, and measuring AI predictions instead of trusting them.
+
+### SoulCurve · *going public soon*
 
 ## GitHub Metrics
 
