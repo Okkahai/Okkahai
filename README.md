@@ -1,120 +1,87 @@
-<div align="center">
-
 # Gün Deniz
 
-**Software Developer · Industrial Automation · Machine Learning**
+**Software Engineer · Backend Systems, AI/ML & Developer Tools**
 
-Building reliable software for industrial processes at **ANDRITZ**, and growing toward machine learning and data-driven systems.
+I build backend services, developer tooling and machine-learning pipelines, preferably the kind whose behaviour can be checked: explicit state machines, deterministic rules around anything a model produces, and tests that exercise real failure modes.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/g%C3%BCn-deniz-039654298)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:okkahaitemp@gmail.com)
-
-</div>
-
----
+[LinkedIn](https://linkedin.com/in/g%C3%BCn-deniz-039654298) · [okkahaitemp@gmail.com](mailto:okkahaitemp@gmail.com)
 
 ## About
 
-I'm a software developer working part-time at **ANDRITZ**, where I build software for industrial automation and process reporting. Day to day I work with **C# / .NET** and **Python**, and I'm currently deepening my skills in **machine learning and deep learning**.
+I work part-time as a software developer at ANDRITZ, writing C#/.NET and Python software for industrial process reporting. Most of my own projects are complete systems rather than isolated scripts: a Python or TypeScript backend with background workers and PostgreSQL, a web frontend, Docker for local runs and CI, and documentation that separates what is verified from what is planned.
 
-| | |
-|---|---|
-| **Role** | Software Developer (part-time) @ ANDRITZ |
-| **Focus** | Industrial automation and SCADA, full-stack development, data analysis |
-| **Learning** | Neural networks, deep learning, TensorFlow |
-| **Open to** | Internships, junior roles and collaboration |
+When a project uses an LLM, the model proposes and ordinary code decides. Evidence is captured by the server, risk rules are fixed, and nothing merges without a backup and passing checks. On the machine-learning side, my hands-on work so far is training and evaluating image classifiers in a university team project, and that is the area I want to go deeper in next.
 
-## Tech Stack
+**Currently interested in:** backend and distributed systems, developer tools for coding agents, reliable AI integration, model evaluation and dataset quality, observability and cloud infrastructure.
 
-**Languages**
-![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+## Selected projects
 
-**Frameworks and libraries**
-![.NET](https://img.shields.io/badge/.NET-5C2D91?style=flat-square&logo=dotnet&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![DevExpress](https://img.shields.io/badge/DevExpress-FF5722?style=flat-square&logoColor=white)
+### [AgentOffice](https://github.com/Okkahai/AgentOffice)
+*Local-first orchestration for autonomous coding agents · TypeScript, Node.js, SQLite, Git*
 
-**Data and cloud**
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0072C6?style=flat-square&logo=microsoftazure&logoColor=white)
+Runs real CLI coding agents on tasks, each in its own Git branch and worktree, and passes every result through a fixed pipeline before it reaches the main branch: commit, run the project's checks, review, pre-merge backup, merge, post-merge verification.
 
-**Tools**
-![Git](https://img.shields.io/badge/Git-F05033?style=flat-square&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-0DB7ED?style=flat-square&logo=docker&logoColor=white)
-![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=flat-square&logo=visualstudio&logoColor=white)
+- Explicit task state machine persisted in SQLite, with restart recovery tested at several crash points
+- Dependency-aware scheduler with a parallelism limit; a planning step turns a goal into a validated task graph
+- Merge safeguards enforced in code: a backup ref is created and re-read before merging, stale or dirty state and failed checks block the merge, the reviewer must differ from the implementing agent, and rollback resets to the recorded backup
+- Claude Code, Codex and OpenCode CLI providers over pipes or a PTY; a local web UI follows the live event stream
 
-## GitHub Metrics
+Status: the core loop is covered by tests on throwaway repositories and has completed a full run with Claude Code. The review gate is deterministic for now; an agent-based reviewer and OS-level sandboxing are still on the roadmap.
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <img src="./metrics/overview.svg" alt="GitHub activity overview" width="100%">
-      <img src="./metrics/notable.svg" alt="Notable contributions" width="100%">
-    </td>
-    <td valign="top" width="50%">
-      <img src="./metrics/calendar.svg" alt="Contribution calendar" width="100%">
-      <img src="./metrics/languages.svg" alt="Most used languages" width="100%">
-    </td>
-  </tr>
-</table>
+### [OpsPilot](https://github.com/Okkahai/SREAgent)
+*Evidence-first incident investigation for SRE · Python, FastAPI, Celery, PostgreSQL, Redis, OpenTelemetry, Next.js*
 
-## Projects
+Ingests telemetry, detects incidents with deterministic rules, and investigates them with an LLM or built-in rules that may only cite evidence the server captured itself. The only action it can execute is opening a pull request, and only after a human approves that exact payload.
 
-### [AI Information Detection (AID)](https://github.com/sssseaurchin/AI-Information-Detection)
-*Team graduation project · Python, TensorFlow, Flask, Docker*
+- OTLP ingestion into daily-partitioned PostgreSQL; Celery beat rules for error rate, p95 latency and DB pool saturation drive an incident lifecycle with deduplication and recovery
+- Every claim is labelled observation, hypothesis or confirmed fact; a verifier drops uncited claims and caps confidence by the amount of independent evidence
+- A fixed policy table assigns risk to proposed actions; approval is bound to a payload hash, execution sits behind a kill switch, and audit rows cannot be edited
+- Unit, integration and Playwright tests, enforced module layering, and a CI job that replays the full failure scenario on every pull request; Kubernetes manifests are exercised on `kind`
 
-Detects AI-generated content in images (CNN) and text (LSTM), served through a Flask API with a web frontend.
+Status: demonstrated against a bundled demo shop with injectable faults, not a real production system. LLM investigations have only been tested with a scripted stand-in.
 
-- **What I did:** Built most of the image-detection track: seven interchangeable architectures (custom CNNs, EfficientNet, ResNet50, ConvNeXt, CLIP ViT), RGB, Sobel and wavelet preprocessing, manifest-based train/val splits, a benchmark runner, calibration, corruption-robustness evaluation and dataset audit tooling.
-- **What I learned:** Evaluation matters as much as the model. Duplicate images leaking between train and validation splits inflate results, so I built tools to find and fix them. I also learned to compare backbones fairly with reproducible splits and to run training in Docker.
+### [MarketOS](https://github.com/Okkahai/MarketOS)
+*Financial-intelligence and paper-trading lab · Python, FastAPI, Celery, PostgreSQL, Redis, Next.js*
 
-### OpsPilot (SREAgent) · *going public soon*
-*Python, FastAPI, Celery, PostgreSQL, Redis, OpenTelemetry, Next.js, Docker*
+Simulation only: there is no broker integration and it never places real orders. It collects daily prices, news, SEC filings and Fed releases, groups articles into scored events, turns them into signals, trades those signals in a virtual portfolio and later checks each one against a benchmark.
 
-AI-assisted DevOps/SRE platform that follows an incident from failure to root cause: telemetry ingestion, deterministic incident detection, AI investigation, proposed fixes and human approval.
+- Point-in-time queries prevent lookahead; a test covers late-arriving price bars
+- Append-only signal journal; trades, the cash ledger and risk decisions are protected by database triggers, and money is `Decimal` throughout
+- Deterministic risk engine (position size, sector cap, cooldown, drawdown breaker) with next-bar fills, slippage and fees
+- Backtests replay the same engine over a past window in an isolated portfolio
 
-- **What I did:** Designed the architecture and built it in phases: a demo microservice app with fault injection, an OpenTelemetry ingestion pipeline with partitioned Postgres storage, rule-based incident detection with a timeline, AI investigation, read-only GitHub integration, an approval workflow and a dashboard.
-- **What I learned:** Observability with OpenTelemetry, background job design with Celery, and how to keep AI output trustworthy by labelling every claim as observation, hypothesis or confirmed fact and by requiring human approval for risky actions.
+Status: the default analyst is a deterministic rules baseline, with an optional Claude analyst. The stock data feed has been verified live; the news feeds and whether the signals have any edge are not yet proven.
 
-### ColdCase AI (Alibi) · *going public soon*
-*TypeScript, Next.js, Zod, Tailwind, Drizzle, PostgreSQL, Vitest*
+### [Alibi](https://github.com/Okkahai/Alibi)
+*Daily murder-mystery logic puzzle · TypeScript, Next.js, Zod, Vitest*
 
-AI detective game where the player questions suspects, examines evidence and catches contradictions against a case truth that is fixed before play begins.
+A new case every UTC day, generated deterministically from the date. Players work out the culprit, method, room and false alibi from the exhibits.
 
-- **What I did:** Wrote ten design documents first, then built the game engines: case-truth schema, NPC knowledge, evidence and interrogation systems, with a test suite that checks the anti-hallucination guarantees. It runs without an API key using a deterministic mock LLM.
-- **What I learned:** Constraining an LLM with schema validation so it cannot contradict the ground truth, and testing AI features deterministically.
+- Backtracking constraint solver: the generator rejects any clue set that does not have exactly one solution, and the solver's input type cannot include the answer
+- Hints come from a clue-only deduction trace; a deduction matrix with undo/redo and keyboard control; an interactive tutorial case
+- Published days are frozen by fingerprint: a test regenerates each past case and fails if any has changed, and a scheduled workflow records each new day
+- Case data is schema-validated and deep-frozen at load time
 
-### MarketOS · *going public soon*
-*Python, FastAPI, Celery, PostgreSQL, Redis, Next.js, TypeScript, Docker*
+### [AI Information Detection](https://github.com/sssseaurchin/AI-Information-Detection)
+*University team project: detecting AI-generated images and text · Python, TensorFlow/Keras, Flask, Docker*
 
-AI financial-intelligence and **paper-trading** lab (simulation only, no real orders). It collects market data and news, clusters news into events, produces AI investment hypotheses, runs them through deterministic risk rules and measures afterwards whether each hypothesis was right.
+My contributions were on the image-classification track:
 
-- **What I did:** Built the full pipeline across nine phases: market data and news ingestion, event clustering, a validated AI signal journal with cost budgeting, a risk engine with a ledger, analytics against SPY, BTC and cash, and backtesting.
-- **What I learned:** Financial accounting and risk rules, avoiding invented data when providers are missing, and measuring AI predictions instead of trusting them.
+- Interchangeable backbones (custom CNNs, EfficientNet, ResNet50, ConvNeXt, CLIP ViT) with RGB, Sobel and wavelet preprocessing
+- Manifest-based train, validation and holdout splits; duplicate audits, a fix for exact-duplicate leakage between splits, and corrupt-image cleanup
+- Evaluation tooling for calibration, corruption robustness, ensembles and benchmark sweeps across backbones, with automatic best-run selection
+- A Docker-based GPU training workflow so runs are reproducible across machines
 
-### SoulCurve · *just started*
-*Machine learning, web app, API*
+## Stack
 
-New project that combines a machine-learning model with a web app and API. Model development starts now, so there are no results to show yet.
+**Languages** · Python, TypeScript, C#, SQL, JavaScript, C<br>
+**Backend** · FastAPI, Celery, SQLAlchemy and Alembic, PostgreSQL, Redis, Node.js, .NET, Flask<br>
+**AI / ML** · TensorFlow/Keras, pretrained CNN and ViT backbones, model evaluation and calibration, LLM integration<br>
+**Frontend** · Next.js, React, Tailwind CSS<br>
+**Infrastructure** · Docker and Compose, GitHub Actions, OpenTelemetry, Kubernetes (Kustomize, kind), Linux, Git
 
-## What I'm Working On
+## Contact
 
-- Machine learning coursework: neural networks, deep learning and data analysis with TensorFlow
-- Reporting tools and dashboards for industrial process data
-- Desktop applications with C# and .NET
-- Python for automation and data science
+Open to software engineering roles and internships in backend, AI/ML and platform engineering.
 
-## Get in Touch
-
-I'm happy to talk about roles, projects or anything in software and data.
-
-- Email: [okkahaitemp@gmail.com](mailto:okkahaitemp@gmail.com) · [gunndenizz@gmail.com](mailto:gunndenizz@gmail.com)
-- LinkedIn: [Gün Deniz](https://linkedin.com/in/g%C3%BCn-deniz-039654298)
+[okkahaitemp@gmail.com](mailto:okkahaitemp@gmail.com) · [gunndenizz@gmail.com](mailto:gunndenizz@gmail.com) · [LinkedIn](https://linkedin.com/in/g%C3%BCn-deniz-039654298)
